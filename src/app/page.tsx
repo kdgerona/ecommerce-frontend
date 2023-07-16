@@ -1,5 +1,15 @@
-const Home: React.FC = () => {
-  return <h1 className='text-3xl font-bold underline'>Hello world!</h1>;
+'use client';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+const RootPage: React.FC = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/login');
+  });
+
+  return <div>Loading...</div>;
 };
 
-export default Home;
+export default RootPage;
