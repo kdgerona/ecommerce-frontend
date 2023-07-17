@@ -19,7 +19,12 @@ export interface IRootLayoutProps {
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang='en'>
-      <body className={zenKakuGothicAntique.className}>{children}</body>
+      <body
+        suppressHydrationWarning={true}
+        className={zenKakuGothicAntique.className}
+      >
+        {children}
+      </body>
     </html>
   );
 };
