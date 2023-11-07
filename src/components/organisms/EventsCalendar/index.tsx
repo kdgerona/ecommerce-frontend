@@ -1,4 +1,8 @@
-import Kalend, { CalendarView, CalendarEvent } from 'kalend'; // import component
+import { CalendarView, CalendarEvent } from 'kalend'; // import component
+import dynamic from 'next/dynamic';
+const Kalend = dynamic(() => import('kalend'), {
+  ssr: false,
+});
 import 'kalend/dist/styles/index.css'; // import styles
 const EventsCalendar: React.FC = () => {
   return (
