@@ -23,7 +23,7 @@ const StoreLayout: React.FC<IRootLayoutProps> = (props) => {
         </div>
         <div className='w-full'>
           <Header />
-          <div className='w-full px-10 py-7'>{children}</div>
+          <div className='w-full h-full max-h-[80%] px-10 py-7'>{children}</div>
         </div>
       </div>
     </main>
